@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Uncontrolled from './components/uncontrolled.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my React App.</h1>>
+      <Uncontrolled />
     </div>
   );
 }
