@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Uncontrolled from './components/uncontrolled.js';
+import Controlled from './components/controlled.js';
 
 function App() {
   return (
     <div className="App">
-      <Uncontrolled />
+      <Controlled />
     </div>
   );
 }
