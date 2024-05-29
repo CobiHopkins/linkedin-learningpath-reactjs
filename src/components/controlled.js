@@ -17,14 +17,18 @@ function Controlled() {
         <form onSubmit={submit}>
             <input 
                 value={title}
-                onChange={event => setTitle(event.target.value)}
+                onChange={
+                    event => setTitle(event.target.value)
+                }
                 type='text'
                 placeholder='color title...'
             />
 
             <input
                 value={color}
-                onChange={event => setColor(event.target.value)}
+                onChange={
+                    event => setColor(event.target.value)
+                }
                 type='color' 
             />
             <button>Add</button>

@@ -5,7 +5,7 @@ import Controlled from './components/controlled.js';
 function App() {
   return (
     <div className="App">
-      <Controlled />
+      <Controlled/>
     </div>
   );
 }
