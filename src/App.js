@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Controlled from './components/controlled.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to my React App.</h1>>
+      <Controlled/>
     </div>
   );
 }
