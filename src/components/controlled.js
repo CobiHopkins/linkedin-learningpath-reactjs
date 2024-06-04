@@ -1,34 +1,40 @@
 import React from 'react';
 import { useState } from 'react';
 
+function useInput(initialValue) {
+    //Custom hook for managing input state. 
+    const [value, setValue] = useState(initialValue);
+    return [
+        {
+            value, onChange: e=> setValue(e.target.value)
+        },
+        () => setValue(initialValue)
+    ];
+}
+
 function Controlled() {
 
-    const [title, setTitle] = useState("");
-    const [color, setColor] = useState("#000000");
+    const [titleProps, resetTitle] = useInput("");
+    const [colorProps, resetColor] = useInput("#000000");
 
-    const submit = e => {
+    const submit = (e) => {
         e.preventDefault();
-        alert(`Title: ${title} Color: ${color}`);
-        setTitle("");
-        setColor("#000000");
+        alert(`${titleProps.value}, ${colorProps.value}`);
+        resetTitle();
+        resetColor();
     }
 
     return (
         <form onSubmit={submit}>
             <input 
-                value={title}
-                onChange={
-                    event => setTitle(event.target.value)
-                }
+                {...titleProps}
                 type='text'
                 placeholder='color title...'
+                required
             />
 
             <input
-                value={color}
-                onChange={
-                    event => setColor(event.target.value)
-                }
+                {...colorProps}
                 type='color' 
             />
             <button>Add</button>
