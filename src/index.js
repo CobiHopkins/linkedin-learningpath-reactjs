@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-import About from './components/about';
-import Contact from './components/contact';
+import {About, History} from './components/about/about';
+import Contact from './components/contact/contact';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -14,7 +14,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}/>
-      <Route path="/about" element={<About />}/>
+      <Route path="/about" element={<About />}>
+        <Route path="history" element={<History />}/>
+      </Route>
       <Route path="/contact" element={<Contact />}/>
     </Routes>
   </BrowserRouter>

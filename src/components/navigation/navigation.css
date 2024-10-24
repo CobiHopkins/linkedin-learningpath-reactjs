@@ -1,0 +1,30 @@
+.appNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #242424;
+}
+
+.appNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.appNav ul li {
+    display: inline-flex;
+    margin: 0 10px;
+}
+
+.appNav ul li a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.appNav ul li a:hover {
+    background-color: #555;
+    transition: all 0.5s ease-in-out;
+}
