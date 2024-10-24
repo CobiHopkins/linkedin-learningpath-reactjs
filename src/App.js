@@ -2,12 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 
-function GithubUser({ name, location, avatar }) {
+const query = `
+query {
+  allLifts {
+    name
+    elevationGain
+    status
+  }
+}
+`;
+
+const opts = {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({ query })
+}
+
+function Lift({ name, elevation, status }) {
+
   return (
     <div>
       <h1>{name}</h1>
-      <p>{location}</p>
-      <img src={avatar} height={150} alt={name}/>
+      <p>{elevation} {status}</p>
     </div>
   )
 }
@@ -20,7 +36,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.github.com/users/CobiHopkins`)
+    fetch(`https://snowtooth.moonhighway.com`, opts)
       .then(response => response.json())
       .then(data => setData(data))
       .then(() => setLoading(false))
@@ -42,11 +58,11 @@ function App() {
     return null;
 
   return (
-    <GithubUser 
-      name={data.name} 
-      location={data.location} 
-      avatar={data.avatar_url}
-      />
+    <div>
+      {data.data.allLifts.map(lift => (
+        <Lift name={lift.name} elevation={lift.elevationGain} status={lift.status}/>
+        ))}
+    </div>
   );
 
 }
