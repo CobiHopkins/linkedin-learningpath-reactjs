@@ -7,8 +7,8 @@
 3. React Components ✅
 4. React State in the Component Tree ✅
 5. Handling Forms in React ✅
-6. Asynchronous React 
-7. React Router
+6. Asynchronous React ✅
+7. React Router ✅
 8. React Testing and Deployment
 9. Conclusion
 
