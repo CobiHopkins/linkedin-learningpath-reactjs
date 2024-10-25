@@ -1,16 +1,20 @@
-# linkedin-learningpath-reactjs
-## React.js Essentials Training - LinkedIn Learning
+# LinkedIn React.js Learning Path
+This repository is used to contain all of the code for each module in the React.js learning path from Linkedin Learning. This learning path includes the following courses:
+
+0. React.js Essential Training ✅
+1. React.js: Building an Interface 
+2. React: Creating and Hosting a Full-Stack Site
+3. React Hooks
+4. React: Accessibility
+5. Building Modern Projects with React
+6. React: Authentication
+7. React: Server-Side Rendering
+
+## React.js Building an Interface - LinkedIn Learning
 
 0. Introduction ✅
-1. What is React? ✅
-2. Intro to React Elements ✅
-3. React Components ✅
-4. React State in the Component Tree ✅
-5. Handling Forms in React ✅
-6. Asynchronous React ✅
-7. React Router ✅
-8. React Testing and Deployment
-9. Conclusion
-
-## LinkedIn React.js Learning Path
-This repository is used to contain all of the code for each module in the React.js learning path from Linkedin Learning.
+1. Set Up and Install ✅
+2. Getting Started
+3. Sort and Search
+4. Mutating Data
+5. Conclusion
