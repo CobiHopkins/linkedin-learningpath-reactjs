@@ -1,12 +1,26 @@
 import './App.css';
-import appointmentList from './data.json';
 import Search from './components/Search/Search';
 import AddAppointment from './components/AddAppointment/AddAppointment';
 import AppointmentInfo from './components/AppointmentInfo/AppointmentInfo';
 
 import { BiCalendar } from'react-icons/bi';
+import { useState, useEffect, useCallback } from 'react';
 
 function App() {
+
+  let [ appointmentList, setAppointmentList ] = useState([]);
+
+  const fetchData = useCallback(() => {
+    fetch('./data.json')
+     .then(response => response.json())
+     .then(data => {
+      setAppointmentList(data);
+     })
+  }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   return (
     <div className="App container mx-auto mt-3 font-thin">
