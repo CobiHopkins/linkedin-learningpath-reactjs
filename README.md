@@ -9,8 +9,8 @@
 5. Handling Forms in React ✅
 6. Asynchronous React ✅
 7. React Router ✅
-8. React Testing and Deployment
-9. Conclusion
+8. React Testing and Deployment ✅
+9. Conclusion ✅
 
 ## LinkedIn React.js Learning Path
 This repository is used to contain all of the code for each module in the React.js learning path from Linkedin Learning.
