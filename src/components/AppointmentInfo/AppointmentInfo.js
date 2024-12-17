@@ -1,6 +1,6 @@
 import { BiTrash } from 'react-icons/bi';
 
-const AppointmentInfo = ({ appointment }) => {
+const AppointmentInfo = ({ appointment, onDeleteAppointment }) => {
 
 
     return (
